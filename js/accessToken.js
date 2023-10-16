@@ -1,5 +1,3 @@
-const client_id = '';
-const client_secret = '';
 
 async function fetchToken() {
     let params = new URLSearchParams();
