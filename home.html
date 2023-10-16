@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/title-page.css">
+    <script src="js/testing.js"></script>
+    <script src="js/accessToken.js"></script>
+    <script src="js/getinfo.js"></script>
+    <meta charset="UTF-8">
+    <title>Band Webpage Generator</title>
+</head>
+<body>
+    <h1>Type in an artist name to generate a webpage</h1>
+
+    <label>Input here:
+        <input id="artist">
+    </label>
+
+    <button onclick="getInput()">Go</button>
+
+    <h2 id="band_name"></h2>
+
+    <p id="token">Access token: </p>
+    <button onclick="tokenCheck()">Check token</button>
+
+
+</body>
+</html>
