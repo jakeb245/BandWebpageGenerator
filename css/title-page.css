@@ -12,6 +12,7 @@ h2 {
     color: white;
     font-family: Helvetica, sans-serif;
     text-align: center;
+    font-size: xxx-large;
 }
 
 label {
@@ -23,3 +24,8 @@ label {
 p {
     color: white;
 }
+
+img {
+    align-content: center;
+}
+

@@ -23,7 +23,7 @@ function getNewToken() {
         const token_dur = data.expires_in;
         const token_exp = Date.now() + (token_dur*1000)
         localStorage.setItem('token_exp', token_exp);
-        document.getElementById('token').innerHTML += "acquired";
+        document.getElementById('token').innerHTML = "Access token: acquired";
     });
 }
 
@@ -37,7 +37,7 @@ function tokenCheck() {
         getNewToken();
     }
     else {
-        document.getElementById('token').innerHTML += "acquired";
+        document.getElementById('token').innerHTML = "Access token: acquired";
     }
 }
 

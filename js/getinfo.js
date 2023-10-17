@@ -12,13 +12,14 @@ async function getArtistInfo(artist) {
     return response.json();
 }
 
-function showArtistInfo() {
+async function showArtistInfo() {
     // run on 'search' button click
     const artist = document.getElementById('artist').value;
-    console.log(artist);
-    document.getElementById("band_name").innerHTML = artist;
-    getArtistInfo(artist).then((data) => {
-        console.log(data);
+    const artistInfo = await getArtistInfo(artist).then((data) => {
+        console.log(data.artists.items[0]);
+        const artistInfo = data.artists.items[0];
+        return artistInfo;
     });
-    //document.getElementById('artist_image').src = img;
+    document.getElementById("band_name").innerHTML = artistInfo.name;
+    document.getElementById("photo").src = artistInfo.images[0].url;
 }
