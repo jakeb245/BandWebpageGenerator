@@ -11,15 +11,17 @@
 </head>
 <body>
     <h1>Type in an artist name to generate a webpage</h1>
+    <div class="input_field">
+        <label>Input here:
+            <input id="artist">
+        </label>
+        <button onclick="showArtistInfo()">Go</button>
+    </div>
 
-    <label>Input here:
-        <input id="artist">
-    </label>
-
-    <button onclick="showArtistInfo()">Go</button>
 
     <h2 id="band_name"></h2>
     <img src="" id="photo" alt="">
+    <a id="spotify_link" href="" class="external_link"></a>
 
     <p id="token">Access token: </p>
     <button onclick="tokenCheck()">Check token</button>

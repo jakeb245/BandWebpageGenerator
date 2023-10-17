@@ -17,9 +17,15 @@ async function showArtistInfo() {
     const artist = document.getElementById('artist').value;
     const artistInfo = await getArtistInfo(artist).then((data) => {
         console.log(data.artists.items[0]);
-        const artistInfo = data.artists.items[0];
-        return artistInfo;
+        return data.artists.items[0];
     });
+    // Band name
     document.getElementById("band_name").innerHTML = artistInfo.name;
+    // Photo
     document.getElementById("photo").src = artistInfo.images[0].url;
+    document.getElementById("photo").width = 300;
+    document.getElementById("photo").height = 300;
+    // Link to Spotify page
+    document.getElementById("spotify_link").innerHTML = `View ${artistInfo.name} on Spotify`;
+    document.getElementById("spotify_link").href = artistInfo.external_urls['spotify'];
 }
